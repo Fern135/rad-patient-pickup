@@ -52,6 +52,9 @@ class Patient(db.Model):
         self.fall_preca     = fall_preca
         self.pt_note        = pt_note
 
+    def setNote(self, pt_note):
+        self.pt_note = pt_note
+
 
 class User(db.Model, UserMixin):
     __tablename__ = "User"
