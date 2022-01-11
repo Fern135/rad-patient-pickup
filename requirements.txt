@@ -1,0 +1,16 @@
+flask #<============================ making the http server in python outside of django   
+Flask-SQLAlchemy #<================= better handling sql data
+flask-login
+sqlalchemy #<======================= better handling sql data
+pymysql #<========================== better handling sql data
+Flask-Mail #<======================= https://pythonhosted.org/Flask-Mail/
+cryptography #<===================== encryption
+python-dotenv #<==================== using .env files
+colorama #<========================= coloring in the console
+pandas #<=========================== I don't know what this is used for
+autopep8 #<========================= lynting or autocompletion
+pip-review #<======================= in theory updating all avaliable field
+gunicorn #<========================= heroku usage
+waitress #<========================= heroku usage
+Faker #<============================ generating fake data
+pip #<============================== updates
