@@ -36,8 +36,8 @@ class Patient(db.Model):
         self.reason_proce   = reason_proce
         self.transport      = transport 
         self.pt_need_O2     = pt_need_O2 
-        self.fall_preca     = fall_preca 
-        self.pt_note        = pt_note 
+        self.fall_preca     = fall_preca # done 
+        self.pt_note        = pt_note  # done
 
     #region setters
     def setNote(self, pt_note):
@@ -81,7 +81,10 @@ class Patient(db.Model):
     #region getters
     def getNote(self):
         return self.pt_note
-        
+
+    def getFallPrecautions(self):
+        return self.fall_preca
+
     #endregion
 
 
