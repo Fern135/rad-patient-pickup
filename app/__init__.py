@@ -14,22 +14,23 @@ mysql_db_conn = f'mysql+pymysql://{Config.username}:{Config.password}@{Config.ip
 
 dev_db = f'sqlite:///{DB_NAME}'
 
-dev_Key = DevelopmentConfig.SECRET_KEY
+development_Key = DevelopmentConfig.SECRET_KEY
+production_key  = ProductionConfig.SECRET_KEY
 
-production_key = ProductionConfig.SECRET_KEY
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = dev_Key
+    app.config['SECRET_KEY'] = development_Key
     app.config['SQLALCHEMY_DATABASE_URI'] = dev_db
 
-    # configuring email sending
+    #region configuring email sending
     # app.config['MAIL_SERVER']     = Config.MAIL_SERVER
     # app.config['MAIL_PORT']       = Config.MAIL_PORT
     # app.config['MAIL_USERNAME']   = Config.MAIL_USERNAME
     # app.config['MAIL_PASSWORD']   = Config.MAIL_PASSWORD
     # app.config['MAIL_USE_TLS']    = Config.MAIL_USE_TLS
     # app.config['MAIL_USE_SSL']    = Config.MAIL_USE_SSL
+    #endregion
 
     db.init_app(app)
 
