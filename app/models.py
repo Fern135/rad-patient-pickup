@@ -25,35 +25,64 @@ class Patient(db.Model):
     pt_note       = db.Column(db.String(10000)) # in case patient cannot be picked up or something else
 
 
-    def __init__(self, 
-        pt_name, 
-        pt_age, 
-        pt_sex, 
-        pt_DOB, 
-        visitor_id, 
-        MR_id, 
-        pt_procedure, 
-        reason_proce, 
-        transport, 
-        pt_need_O2, 
-        fall_preca, 
-        pt_note
-    ):
+    def __init__(self, pt_name, pt_age, pt_sex, pt_DOB, visitor_id, MR_id, pt_procedure, reason_proce, transport, pt_need_O2, fall_preca, pt_note):
         self.pt_name        = pt_name
-        self.pt_age         = pt_age
-        self.pt_sex         = pt_sex
-        self.pt_DOB         = pt_DOB
-        self.visitor_id     = visitor_id
+        self.pt_age         = pt_age 
+        self.pt_sex         = pt_sex 
+        self.pt_DOB         = pt_DOB 
+        self.visitor_id     = visitor_id 
         self.MR_id          = MR_id 
-        self.pt_procedure   = pt_procedure
+        self.pt_procedure   = pt_procedure 
         self.reason_proce   = reason_proce
-        self.transport      = transport
-        self.pt_need_O2     = pt_need_O2
-        self.fall_preca     = fall_preca
-        self.pt_note        = pt_note
+        self.transport      = transport 
+        self.pt_need_O2     = pt_need_O2 
+        self.fall_preca     = fall_preca 
+        self.pt_note        = pt_note 
 
+    #region setters
     def setNote(self, pt_note):
         self.pt_note = pt_note
+
+    def setFallPrecautions(self, fall_preca):
+        self.fall_preca = fall_preca
+
+    def setO2Need(self, pt_need_O2):
+        self.pt_need_O2 = pt_need_O2
+
+    def setTransport(self, transport):
+        self.transport = transport
+
+    def setReasonProcedure(self, reason_proce):
+        self.reason_proce = reason_proce
+        
+    def setProcedure(self, pt_procedure):
+        self.pt_procedure = pt_procedure
+
+    def setMRID(self, MR_id):
+        self.MR_id = MR_id
+
+    def setVisitorId(self,visitor_id):
+        self.visitor_id = visitor_id    
+
+    def setDOB(self, pt_DOB):
+        self.pt_DOB = pt_DOB
+
+    def setPtSex(self, pt_sex):
+        self.pt_sex = pt_sex
+
+    def setPtAge(self, pt_age):
+        self.pt_age = pt_age
+
+    def setPtName(self, pt_name):
+        self.pt_name = pt_name
+
+    #endregion
+
+    #region getters
+    def getNote(self):
+        return self.pt_note
+        
+    #endregion
 
 
 class User(db.Model, UserMixin):
