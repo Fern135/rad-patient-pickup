@@ -1,4 +1,4 @@
-# rad-patient-pickup
+# rad-patient-pickup (CURRENTLY ABANDONED) 
 since working at a hospital for some time i worked with work orders for the radiology department. 
 This is more of a structure of what i think would've made my job a lot easier. 
 
